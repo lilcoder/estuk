@@ -1,4 +1,14 @@
-<h1>Listing books</h1>
+<div class="row">
+  <h1>eStuk books</h1>
+
+  <%= render @books %>
+
+</div>
+<%= link_to 'Add New Book', new_book_path %>
+
+
+<hr>
+
 
 <table>
   <thead>
