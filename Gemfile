@@ -32,6 +32,7 @@ gem 'devise'
 gem 'cancan'
 gem 'paperclip'
 
+gem 'dotenv-rails', groups: :development
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
