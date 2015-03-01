@@ -12,7 +12,7 @@ class Book < ActiveRecord::Base
 	message: "Only pdfs allowed"
 	 
 	validates :image, attachment_presence: true
-	validates :resource, attachment_presence: false
+	validates :resource, attachment_presence: true
 
 
 end

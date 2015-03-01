@@ -4,3 +4,10 @@
   <%= link_to "Books", books_path, class: "btn btn-primary btn-lg" %>
  <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>	
 </div>
+
+<div class="row">
+  <h1>Latest eStuk books</h1>
+
+  <%= render @books %>
+
+</div>
