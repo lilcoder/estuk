@@ -1,4 +1,4 @@
-class TransactionController < ApplicationController
+class TransactionsController < ApplicationController
 	def create
 		book = Book.find_by!(slug: params[:slug])
 		token = params[:stripeToken]
@@ -11,7 +11,7 @@ class TransactionController < ApplicationController
 				description: current_user.email)
 
 			@sale = book.sales.create!(buyer_email: current_user.email)
-     redirect_to pickup_url(guid: @sale.guid)
+     redirect_to pickup_url(grid: @sale.grid)
      
      rescue Stripe::CardError => e
      
@@ -24,7 +24,7 @@ class TransactionController < ApplicationController
 	end
 
 	def pickup
-		@sale = Sale.find_by!(guid: params[:guid])
+		@sale = Sale.find_by!(grid: params[:grid])
     	@book = @sale.book
 	end
 
