@@ -1,22 +1,25 @@
-<div class="row">
-	<h1 class="text-center">Dashboard</h1>
-	
-	<div class="col-md-4">
-		<h3 class="text-center">My Books
-		<%= link_to "New Book", new_book_path, class: "btn btn-primary btn-sm" %>
-		</h3>	
+<div class="container">
+	<div class="row">
+		<h1 class="text-center">Dashboard</h1>
+		<div class="text-center"><%= link_to "New Book", new_book_path, class: "btn btn-primary btn-sm" %></div>
+		<div class="clearfix"></div>
 
-		<%= render "books" %>
+		<div class="col-md-4">
+			<h3 class="uppercase">My Books</h3>
 
-	</div>
-	
-	<div class="col-md-4">
-		<h3 class="text-center">Purchased</h3>	
-		<%= render "purchased" %>	
-	</div>
 
-	<div class="col-md-4">
-		<h3 class="text-center">Sales</h3>	
-		<%= render "sales" %>
+			<%= render "books" %>
+
+		</div>
+		
+		<div class="col-md-4">
+			<h3 class="uppercase">Purchased</h3>	
+			<%= render "purchased" %>	
+		</div>
+
+		<div class="col-md-4">
+			<h3 class="uppercase">Sales</h3>	
+			<%= render "sales" %>
+		</div>
 	</div>
-</div>
+</div>	
