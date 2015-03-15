@@ -21,9 +21,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  adapter: postgresql
-  database: estukism
-  encoding: utf8
-  min_messages: warning
-  pool: 5
-  timeout: 5000
+  <<: *default
+  database: db/production.sqlite3
